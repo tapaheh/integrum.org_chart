@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!-- https://github.com/cpettitt/dagre -->
+<script src="./lib/js/dagre.min.js" type="text/javascript" language="javascript"></script>
+
+<!-- http://jointjs.com -->
+<!-- включает jquery 1.9.1, Backbone.js 1.0.0 -->
+<script src="./lib/js/joint.min.js" type="text/javascript" language="javascript"></script>
+
+<!-- https://github.com/ivanvanderbyl/ui-progress-bar -->
+<script src="./lib/js/animated-progress.js" type="text/javascript" language="javascript"></script>
+
+<script src="./lib/js/jquery.xml2json.js" type="text/javascript" language="javascript"></script>
+<script src="lib/js/integrum.orgchart.js" type="text/javascript" language="javascript"></script>
+
+<link rel="stylesheet" href="./lib/css/joint.min.css" type="text/css"/>
+<link rel="stylesheet" href="./lib/css/ui-progress-bar.css" type="text/css"/>
+<link rel="stylesheet" href="./lib/css/integrum.orgchart.css" type="text/css"/>
+
+<link rel="stylesheet" href="./lib/css/page.css" type="text/css"/>
+
+
+<title>Orgchart</title>
+
+
+<style type="text/css">
+/**
+* integrum.orgchart inline styles
+* Firefox отображает только градиенты определенные inline
+*/
+g.Org.root .node rect {fill: url(#rootGrad);}
+g.Org.p1 .node rect, g.Org.d1 .node rect {fill: url(#l1Grad);}
+g.Org.p1 .node:hover rect, g.Org.d1 .node:hover rect{fill: url(#l1HoverGrad);}
+g.Org.p2 .node rect, g.Org.d2 .node rect {fill: url(#l2Grad);}
+g.Org.p2 .node:hover rect, g.Org.d2 .node:hover rect {fill: url(#l2HoverGrad);}
+g.Org.nolink .node rect{fill: url(#nolinkGrad);}
+g.Org.nolink .node:hover rect{fill: url(#nolinkHoverGrad);}
+
+</style>
+
+<script type="text/javascript">
+    $(function(){
+        if ($.browser.msie && $.browser.majorVersion < 9){
+            $('#canvas').html('<b>Для IE8 и ниже отображается флеш версия диаграммы</b>')
+        } else {
+            var xmlPath = 'xml/' + ($.urlParam('f') ? $.urlParam('f') : 'Novatek.xml');
+            var options = {
+                xml:xmlPath, //путь к xml файлу
+                speed:0.008  //скорость прокрутки, дефолт = 0.01
+                /*
+                //значения по умолчанию
+                eWidth: 169, //ширина элемента
+                eHeight: 60, //высота элемента
+                paperMinHeight: 700, //минимальная высота контейнера
+                paperHeight: 'auto', //высота контейнера
+                paperMinWidth: 600, //минимальная ширина контейнера
+                paperWidth: 'auto', //ширина контейнера
+                rankSeparation: 'auto', //расстояние между группами элементов
+                baseUrl: 'http://companies.integrum.ru/CorporateStructure.aspx?orgId=', //url для ссылок
+                //градиенты для оформления SVG элементов - здесь нельзя использовать css
+                gradients : {
+                    'rootGrad': {0:'C3F0FC', 50:'A1F1FF', 51:'5EE7FF', 100:'E2FAFF'},
+                    'l1Grad': {0:'ebffeb', 50:'c7ffc7', 51:'a3ffa3', 100:'eeffee'},
+                    'l1HoverGrad': {0:'d1ffd1', 50:'74ff74', 51:'1bff1b', 100:'cfffcf'},
+                    'l2Grad': {0:'f6fbff', 50:'d7f1ff', 51:'d7f1ff', 100:'f4fbff'},
+                    'l2HoverGrad': {0:'d9f2ff', 50:'99ddff', 51:'48c2ff', 100:'daf2ff'},
+                    'nolinkGrad': {0:'fbfbfb', 50:'f3f3f3', 51:'f0f0f0', 100:'fbfbfb'},
+                    'nolinkHoverGrad': {0:'f5f5f5', 50:'e5e5e5', 51:'d3d3d3', 100:'f6f6f6'}
+                }
+                */
+            };
+            $('#canvas').orgchart(options);
+        }
+    });
+</script>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container-fluid">
+        <div id="menu-header-container" class="i-head">&nbsp;</div>
+
+        <div class="companie-name">
+            Открытое Акционерное Общество "Новатэк"
+        </div>
+
+        <div class="page-header search-form-ui">
+            <span class="page-header-title">Корпоративная структура</span>
+        </div>
+
+        <table class="content-table">
+            <tbody>
+            <tr>
+                <td class="content-left">
+                    <div id="canvas"></div>
+                </td>
+                <td class="menu-right">
+                    <div class="main-menu-vertical">
+                        <ul>
+
+                            <li>
+                                <div class="item-header">
+                                    Загрузить XML:
+                                </div>
+                                <div class="item-content collapsed">
+                                    <ul>
+                                        <li>
+                                            <a class="js-menu" href="./index.html?f=siboss.xml"
+                                               title="CиБосс">СиБОСС</a>
+                                        </li>
+                                        <li>
+                                            <a class="js-menu" href="./index.html?f=Port.xml" title="Морской порт">Новороссийский
+                                                морской торговый порт</a>
+                                        </li>
+                                        <li>
+                                            <a class="js-menu" href="./index.html?f=Novatek.xml">Новатек</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>     

@@ -1,0 +1,154 @@
+.ui-progress-bar{position:relative; left:25%; top:100px; width:50%; display:none}
+
+g.Org.element {
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+g.Org text{fill:black}
+g.Org .node rect {
+    stroke-width: 1px;
+    stroke: #62ee62;
+    fill: #C3F0FC;
+}
+g.Org.root .node rect {
+    stroke: #0EBEEC;
+    fill: url(#rootGrad);
+}
+g.Org.p1 .node rect, g.Org.d1 .node rect {
+    stroke: #62ee62;
+    fill: url(#l1Grad);
+}
+g.Org.p1 .node:hover rect, g.Org.d1 .node:hover rect{
+    stroke: #3be93b;
+    fill: url(#l1HoverGrad);
+}
+g.Org.p2 .node rect, g.Org.d2 .node rect {
+    stroke: #a8d6ee;
+    fill: url(#l2Grad);
+}
+g.Org.p2 .node:hover rect, g.Org.d2 .node:hover rect {
+    stroke: #1993f3;
+    fill: url(#l2HoverGrad);
+}
+g.Org.nolink .node rect{
+    stroke: #dddddd;
+    fill: url(#nolinkGrad);
+}
+g.Org.nolink .node:hover rect{
+    stroke: #c7c7c7;
+    fill: url(#nolinkHoverGrad);
+}
+g.Org .label text {
+    fill:#555;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 2.5em;
+}
+g.Org .label rect {
+    stroke-width: 0px;
+    fill: #f3f9ff;
+}
+g.Org path, line {
+    fill: #7ad;
+    stroke: #7ad;
+    stroke-width: 1;
+    opacity: 0.8
+}
+
+.tooltip {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    position: fixed;
+    z-index: 100;
+    border-radius: 5px;
+    background-color: #333;
+    border: 2px solid #242424;
+    color: #bcbcbc;
+    pointer-events: none;
+    padding: 10px;
+    text-shadow: 0 -1px 0 #000;
+}
+.tooltip.small {
+    padding: 5px;
+    font-size: 10px;
+}
+.tooltip:after, .tooltip:before {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.tooltip.left:after, .tooltip.left:before {
+    right: 100%;
+    top: 50%}
+.tooltip.right:after, .tooltip.right:before {
+    top: 50%;
+    left: 100%}
+.tooltip.top:after, .tooltip.top:before {
+    left: 50%;
+    bottom: 100%}
+.tooltip.bottom:after, .tooltip.bottom:before {
+    left: 50%;
+    top: 100%}
+.tooltip:after {
+    border-width: 6px;
+}
+.tooltip.left:after {
+    border-right-color: #333;
+    margin-top: -6px;
+}
+.tooltip.right:after {
+    border-left-color: #333;
+    margin-top: -6px;
+}
+.tooltip.top:after {
+    border-bottom-color: #333;
+    margin-left: -6px;
+}
+.tooltip.bottom:after {
+    border-top-color: #333;
+    margin-left: -6px;
+}
+.tooltip:before {
+    border-width: 8px;
+}
+.tooltip.left:before {
+    border-right-color: #242424;
+    margin-top: -8px;
+}
+.tooltip.right:before {
+    border-left-color: #242424;
+    margin-top: -8px;
+}
+.tooltip.top:before {
+    border-bottom-color: #242424;
+    margin-left: -8px;
+}
+.tooltip.bottom:before {
+    border-top-color: #242424;
+    margin-left: -8px;
+}
+.tooltip {
+    border-radius: 5px;
+    background-color: rgba(220, 240, 255, 0.86);
+    border: 1px solid #02b7e3;
+    color: #333;
+    padding: 0 12px;
+    font-size: 11px;
+    font-weght: normal;
+    text-shadow: none;
+    max-width: 250px;
+}
+
+.tooltip.bottom:before {
+    border-top-color: #02b7e3;
+    margin-left: -8px;
+}
+
+.tooltip.bottom:after {
+    border-top-color: #e0f5ff;
+    margin-left: -6px;
+}

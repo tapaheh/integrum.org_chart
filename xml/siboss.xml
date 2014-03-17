@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CompanyHierarchy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" state="OK">
+ <RootCompany fullname="Общество с ограниченной ответственностью &quot;СиБОСС технолоджи&quot;" id="59052363" name="ООО &quot;СиБОСС технолоджи&quot;" />
+ <ChildCompanies>
+  <ChildCompany fullname="Некоммерческая Организация &quot;Ассоциация Сибосс&quot;" id="d159143396" name="НО &quot;Ассоциация Сибосс&quot;" parentId="59052363" primaryId="2196110" topChild="false" percentShare="-1" amountShare="" />
+  <ChildCompany fullname="Общество с ограниченной ответственностью &quot;СиБОСС Сервис&quot;" id="d2_59756644_59143396" name="ООО &quot;СиБОСС Сервис&quot;" parentId="d159143396" primaryId="2208267" topChild="false" percentShare="100.00" amountShare="10 000,00" />
+  <ChildCompany fullname="Благотворительный фонд &quot;СиБОСС - Регион&quot;" id="d2_74388362_59143396" name="БФ &quot;СиБОСС - Регион&quot;" parentId="d159143396" primaryId="974361" topChild="false" percentShare="-1" amountShare="" />
+  <ChildCompany fullname="Сибосс Холдинг Лимитед" id="p1-9035077" name="Сибосс Холдинг Лимитед" parentId="59052363" primaryId="" topChild="true" percentShare="100.00" amountShare="720 000,00" />
+ </ChildCompanies>
+</CompanyHierarchy>
