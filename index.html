@@ -48,10 +48,10 @@ g.Org.nolink .node:hover rect{fill: url(#nolinkHoverGrad);}
         } else {
             var xmlPath = 'xml/' + ($.urlParam('f') ? $.urlParam('f') : 'Novatek.xml');
             var options = {
-                xml:xmlPath, //путь к xml файлу
-                speed:0.008  //скорость прокрутки, дефолт = 0.01
+                xml:xmlPath //путь к xml файлу
                 /*
                 //значения по умолчанию
+                speed:0.15  //скорость прокрутки, дефолт = 0.15
                 eWidth: 169, //ширина элемента
                 eHeight: 60, //высота элемента
                 paperMinHeight: 700, //минимальная высота контейнера
@@ -120,6 +120,15 @@ g.Org.nolink .node:hover rect{fill: url(#nolinkHoverGrad);}
                                             <a class="js-menu" href="./index.html?f=Novatek.xml">Новатек</a>
                                         </li>
                                     </ul>
+                                </div>
+                            </li>
+							
+							 <li>
+                                <div class="item-header"  style="margin-top:2em">
+                                    Скорость прокрутки (1-100):
+                                </div>
+                                <div class="item-content">
+                                    <input type="text" maxlength="3" value="80" id="#speedVal"/> <input type="submit" value="Установить" id="#speedSet"/>
                                 </div>
                             </li>
                         </ul>
