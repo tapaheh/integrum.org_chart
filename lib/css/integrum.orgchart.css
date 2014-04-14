@@ -19,6 +19,7 @@ g.Org.p1 .node rect, g.Org.d1 .node rect {
     stroke: #62ee62;
     fill: url(#l1Grad);
 }
+g.Org.p1 .node.hover rect, g.Org.d1 .node.hover rect, /* ie */
 g.Org.p1 .node:hover rect, g.Org.d1 .node:hover rect{
     stroke: #3be93b;
     fill: url(#l1HoverGrad);
@@ -27,6 +28,7 @@ g.Org.p2 .node rect, g.Org.d2 .node rect {
     stroke: #a8d6ee;
     fill: url(#l2Grad);
 }
+g.Org.p2 .node.hover rect, g.Org.d2 .node.hover rect, /* ie */
 g.Org.p2 .node:hover rect, g.Org.d2 .node:hover rect {
     stroke: #1993f3;
     fill: url(#l2HoverGrad);
@@ -35,6 +37,7 @@ g.Org.nolink .node rect{
     stroke: #dddddd;
     fill: url(#nolinkGrad);
 }
+g.Org.nolink .node.hover rect, /* ie */
 g.Org.nolink .node:hover rect{
     stroke: #c7c7c7;
     fill: url(#nolinkHoverGrad);
@@ -53,7 +56,7 @@ g.Org path, line {
     fill: #7ad;
     stroke: #7ad;
     stroke-width: 1;
-    opacity: 0.8
+    opacity: 1;
 }
 
 .tooltip {
